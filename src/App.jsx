@@ -161,7 +161,7 @@ function App() {
       <span className="contact-icon">⌘</span>
       <span>
         <small>Linkedin</small>
-        <strong>Ver meus projetos</strong>
+        <strong>Conecte-se comigo</strong>
       </span>
     </a>
   </div>
