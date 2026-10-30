@@ -1,9 +1,13 @@
 
 import './App.css'
 
+import { Mail, Phone } from 'lucide-react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+
 function App() {
   return (
     <main>
+      {/* NAVEGAÇÃO */}
       <nav className="navbar">
         <a href="#inicio" className="logo">
           ALTIVO JUNIOR<span>DEV</span>
@@ -17,6 +21,7 @@ function App() {
         </div>
       </nav>
 
+      {/* APRESENTAÇÃO */}
       <section className="hero" id="inicio">
         <p className="eyebrow">DESENVOLVEDOR EM FORMAÇÃO</p>
 
@@ -35,11 +40,13 @@ function App() {
           <a href="#projetos" className="button primary">
             Ver meus projetos
           </a>
+
           <a href="#contato" className="button secondary">
             Entrar em contato
           </a>
         </div>
 
+        {/* CARTÃO DE CÓDIGO */}
         <div className="code-card">
           <div className="window-dots">
             <span />
@@ -60,26 +67,32 @@ function App() {
         </div>
       </section>
 
+      {/* SOBRE MIM */}
       <section className="content-section" id="sobre">
         <p className="eyebrow">01 / SOBRE MIM</p>
+
         <h2>Transformando aprendizado em projetos.</h2>
+
         <p>
-          Formado em Análise e Desenvolvimento de Sistemas e estudande de Engenharia de Software.
+          Formado em Análise e Desenvolvimento de Sistemas
+          e estudante de Engenharia de Software.
           Estou construindo minha trajetória na tecnologia,
-          desenvolvendo projetos e aprimorando minhas habilidades
-          em programação e desenvolvimento de software.
+          desenvolvendo projetos e aprimorando minhas
+          habilidades em programação e desenvolvimento de software.
         </p>
       </section>
 
+      {/* TECNOLOGIAS */}
       <section className="content-section" id="tecnologias">
         <p className="eyebrow">02 / TECNOLOGIAS</p>
+
         <h2>Ferramentas que utilizo</h2>
 
         <div className="tags">
           <span>HTML</span>
           <span>CSS</span>
           <span>JavaScript</span>
-          <span>Typescript</span>
+          <span>TypeScript</span>
           <span>React</span>
           <span>Vite</span>
           <span>Git</span>
@@ -87,9 +100,12 @@ function App() {
         </div>
       </section>
 
+      {/* PROJETOS */}
       <section className="content-section" id="projetos">
         <p className="eyebrow">03 / PORTFÓLIO</p>
+
         <h2>Meus projetos</h2>
+
         <p>
           Este espaço será atualizado conforme novos projetos
           forem desenvolvidos.
@@ -97,82 +113,112 @@ function App() {
 
         <article className="project-card">
           <span className="project-number">PROJETO 001</span>
+
           <h3>Meu portfólio</h3>
+
           <p>
             Um espaço para apresentar minha evolução,
             minhas habilidades e meus projetos.
           </p>
-          <span className="project-status">Em desenvolvimento</span>
+
+          <span className="project-status">
+            Em desenvolvimento
+          </span>
         </article>
       </section>
 
-      
-<section className="content-section contact" id="contato">
-  <p className="eyebrow">04 / CONTATO</p>
+      {/* CONTATO */}
+      <section className="content-section contact" id="contato">
+        <p className="eyebrow">04 / CONTATO</p>
 
-  <h2>Vamos construir algo juntos?</h2>
+        <h2>Vamos construir algo juntos?</h2>
 
-  <p>
-    Tem uma ideia ou oportunidade? Entre em contato.
-    Será um prazer conversar com você!
-  </p>
+        <p>
+          Tem uma ideia ou oportunidade? Entre em contato.
+          Será um prazer conversar com você!
+        </p>
 
-  <div className="contact-list">
-    <a href="mailto:altivoajunior@outlook.com" className="contact-item">
-      <span className="contact-icon">✉</span>
-      <span>
-        <small>E-mail</small>
-        <strong>altivoajunior@outlook.com</strong>
-      </span>
-    </a>
+        <div className="contact-list">
 
-    <a
-      href="https://wa.me/55DDDNUMERO"
-      className="contact-item"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <span className="contact-icon">☏</span>
-      <span>
-        <small>WhatsApp</small>
-        <strong>(DD) 99999-9999</strong>
-      </span>
-    </a>
+          {/* EMAIL */}
+          <a
+            href="mailto:altivoajunior@outlook.com"
+            className="contact-item"
+          >
+            <span className="contact-icon">
+              <Mail size={22} />
+            </span>
 
-    <a
-      href="https://github.com/SEU-USUARIO"
-      className="contact-item"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <span className="contact-icon">⌘</span>
-      <span>
-        <small>GitHub</small>
-        <strong>Ver meus projetos</strong>
-      </span>
-    </a>
+            <span>
+              <small>E-mail</small>
+              <strong>altivoajunior@outlook.com</strong>
+            </span>
+          </a>
 
-    <a
-      href="https://www.linkedin.com/in/altivo-junior-113297379/"
-      className="contact-item"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <span className="contact-icon">⌘</span>
-      <span>
-        <small>Linkedin</small>
-        <strong>Conecte-se comigo</strong>
-      </span>
-    </a>
-  </div>
-</section>
+          {/* WHATSAPP */}
+          <a
+            href="https://wa.me/55DDDNUMERO"
+            className="contact-item"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="contact-icon whatsapp">
+              <Phone size={22} />
+            </span>
 
+            <span>
+              <small>WhatsApp</small>
+              <strong>Vamos conversar</strong>
+            </span>
+          </a>
 
+          {/* GITHUB */}
+          <a
+            href="https://github.com/SEU-USUARIO"
+            className="contact-item"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="contact-icon github">
+              <FaGithub size={22} />
+            </span>
+
+            <span>
+              <small>GitHub</small>
+              <strong>Ver meus projetos</strong>
+            </span>
+          </a>
+
+          {/* LINKEDIN */}
+          <a
+            href="https://www.linkedin.com/in/altivo-junior-113297379/"
+            className="contact-item"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="contact-icon linkedin">
+              <FaLinkedin size={22} />
+            </span>
+
+            <span>
+              <small>LinkedIn</small>
+              <strong>Conecte-se comigo</strong>
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+      {/* RODAPÉ */}
       <footer>
         <a href="#inicio" className="logo">
           ALTIVO<span>DEV</span>
         </a>
-        <p>© {new Date().getFullYear()} Altivo Junior. Todos direitos reservados.</p>
+
+        <p>
+          © {new Date().getFullYear()} Altivo Junior.
+          Todos os direitos reservados.
+        </p>
       </footer>
     </main>
   )

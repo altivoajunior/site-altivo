@@ -722,3 +722,36 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* =========================================
+   ÍCONES PROFISSIONAIS DE CONTATO
+========================================= */
+
+.contact-icon {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.1);
+}
+
+.contact-icon.whatsapp {
+  color: #25d366 !important;
+  background: #25d36618 !important;
+}
+
+.contact-icon.github {
+  color: #ffffff !important;
+  background: #ffffff15 !important;
+}
+
+.contact-icon.linkedin {
+  color: #0a9cf5 !important;
+  background: #0a9cf518 !important;
+}
+
+
