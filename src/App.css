@@ -340,16 +340,20 @@ main {
   background: #0c0d12;
 }
 
+/* Títulos com largura controlada */
+
 .content-section h2 {
-  max-width: 800px;
+  max-width: 720px;
   margin-bottom: 22px;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.2;
   letter-spacing: -1px;
 }
 
+/* Textos com leitura mais confortável */
+
 .content-section > p:not(.eyebrow) {
-  max-width: 760px;
+  max-width: 680px;
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.9;
@@ -444,7 +448,7 @@ main {
 
 /* =========================================
    CONTATO
-   Alinhamento central e cartões
+   Alinhamento central
 ========================================= */
 
 section.content-section.contact {
@@ -474,7 +478,7 @@ section.content-section.contact > p:not(.eyebrow) {
   line-height: 1.9;
 }
 
-/* Grade dos cartões de contato */
+/* Grade dos cartões */
 
 section.content-section.contact > .contact-list {
   display: grid;
@@ -486,7 +490,7 @@ section.content-section.contact > .contact-list {
   text-align: left;
 }
 
-/* Cartão individual */
+/* Cartões individuais */
 
 section.content-section.contact .contact-item {
   display: flex;
@@ -512,7 +516,7 @@ section.content-section.contact .contact-item:hover {
   background: #171522;
 }
 
-/* Ícones dos cartões */
+/* Ícones */
 
 section.content-section.contact .contact-icon {
   display: grid;
