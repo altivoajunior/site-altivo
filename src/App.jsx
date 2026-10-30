@@ -118,11 +118,11 @@ function App() {
   </p>
 
   <div className="contact-list">
-    <a href="mailto:SEUEMAIL@EXEMPLO.COM" className="contact-item">
+    <a href="mailto:altivoajunior@outlook.com" className="contact-item">
       <span className="contact-icon">✉</span>
       <span>
         <small>E-mail</small>
-        <strong>SEUEMAIL@EXEMPLO.COM</strong>
+        <strong>altivoajunior@outlook.com</strong>
       </span>
     </a>
 
@@ -148,6 +148,19 @@ function App() {
       <span className="contact-icon">⌘</span>
       <span>
         <small>GitHub</small>
+        <strong>Ver meus projetos</strong>
+      </span>
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/altivo-junior-113297379/"
+      className="contact-item"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <span className="contact-icon">⌘</span>
+      <span>
+        <small>Linkedin</small>
         <strong>Ver meus projetos</strong>
       </span>
     </a>
