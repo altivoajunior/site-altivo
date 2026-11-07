@@ -340,8 +340,6 @@ main {
   background: #0c0d12;
 }
 
-/* Títulos com largura controlada */
-
 .content-section h2 {
   max-width: 720px;
   margin-bottom: 22px;
@@ -349,8 +347,6 @@ main {
   line-height: 1.2;
   letter-spacing: -1px;
 }
-
-/* Textos com leitura mais confortável */
 
 .content-section > p:not(.eyebrow) {
   max-width: 680px;
@@ -368,10 +364,10 @@ main {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 30px;
-  cursor: pointer;
 }
 
-.tags span {
+.tags .tech-item {
+  position: relative;
   display: inline-flex;
   align-items: center;
   padding: 12px 20px;
@@ -381,16 +377,107 @@ main {
   color: #d5ceff;
   font-size: 0.92rem;
   font-weight: 600;
+  cursor: pointer;
   transition:
     border-color 0.2s ease,
     transform 0.2s ease,
     background 0.2s ease;
 }
 
-.tags span:hover {
+.tags .tech-item:hover {
   transform: translateY(-3px);
   border-color: var(--purple);
   background: #8b7cff20;
+}
+
+/* TOOLTIP */
+
+.tags .tech-item::after {
+  content: attr(data-tooltip);
+
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+
+  width: 230px;
+  padding: 13px 15px;
+
+  border: 1px solid #8b7cff70;
+  border-radius: 10px;
+
+  background: rgba(18, 19, 31, 0.97);
+  color: #e8e5ff;
+
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+
+  box-shadow:
+    0 10px 35px #0008,
+    0 0 20px #8b7cff20;
+
+  backdrop-filter: blur(14px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translate(-50%, 8px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+
+  z-index: 50;
+}
+
+/* SETA DO TOOLTIP */
+
+.tags .tech-item::before {
+  content: "";
+
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+
+  border: 7px solid transparent;
+  border-top-color: #8b7cff;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateX(-50%);
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+
+  z-index: 51;
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+
+.tags .tech-item:hover::after,
+.tags .tech-item:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.tags .tech-item:hover::before,
+.tags .tech-item:focus-visible::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ACESSIBILIDADE */
+
+.tags .tech-item:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
 }
 
 /* =========================================
@@ -410,7 +497,7 @@ main {
   transition:
     transform 0.2s ease,
     border-color 0.2s ease;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -450,7 +537,6 @@ main {
 
 /* =========================================
    CONTATO
-   Alinhamento central
 ========================================= */
 
 section.content-section.contact {
@@ -480,7 +566,7 @@ section.content-section.contact > p:not(.eyebrow) {
   line-height: 1.9;
 }
 
-/* Grade dos cartões */
+/* GRADE DOS CARTÕES */
 
 section.content-section.contact > .contact-list {
   display: grid;
@@ -492,7 +578,7 @@ section.content-section.contact > .contact-list {
   text-align: left;
 }
 
-/* Cartões individuais */
+/* CARTÕES INDIVIDUAIS */
 
 section.content-section.contact .contact-item {
   display: flex;
@@ -518,7 +604,7 @@ section.content-section.contact .contact-item:hover {
   background: #171522;
 }
 
-/* Ícones */
+/* ÍCONES */
 
 section.content-section.contact .contact-icon {
   display: grid;
@@ -530,9 +616,33 @@ section.content-section.contact .contact-icon {
   background: #28213f;
   color: #b6a8ff;
   font-size: 1.4rem;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
-/* Textos dos cartões */
+section.content-section.contact .contact-item:hover .contact-icon {
+  transform: scale(1.1);
+}
+
+.contact-icon.whatsapp {
+  color: #25d366 !important;
+  background: #25d36618 !important;
+}
+
+.contact-icon.github {
+  color: #ffffff !important;
+  background: #ffffff15 !important;
+}
+
+.contact-icon.linkedin {
+  color: #0a9cf5 !important;
+  background: #0a9cf518 !important;
+}
+
+/* TEXTOS DOS CARTÕES */
 
 section.content-section.contact .contact-item small,
 section.content-section.contact .contact-item strong {
@@ -683,9 +793,16 @@ footer p {
     gap: 10px;
   }
 
-  .tags span {
+  .tags .tech-item {
     padding: 10px 14px;
     font-size: 0.85rem;
+  }
+
+  /* TOOLTIP DESATIVADO EM TELAS TOUCH */
+
+  .tags .tech-item::after,
+  .tags .tech-item::before {
+    display: none;
   }
 
   .project-card {
@@ -724,36 +841,3 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
-
-
-/* =========================================
-   ÍCONES PROFISSIONAIS DE CONTATO
-========================================= */
-
-.contact-icon {
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease;
-}
-
-.contact-item:hover .contact-icon {
-  transform: scale(1.1);
-}
-
-.contact-icon.whatsapp {
-  color: #25d366 !important;
-  background: #25d36618 !important;
-}
-
-.contact-icon.github {
-  color: #ffffff !important;
-  background: #ffffff15 !important;
-}
-
-.contact-icon.linkedin {
-  color: #0a9cf5 !important;
-  background: #0a9cf518 !important;
-}
-
-

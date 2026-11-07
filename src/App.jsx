@@ -82,21 +82,78 @@ function App() {
         </p>
       </section>
 
-      {/* TECNOLOGIAS */}
+      {/* TECNOLOGIAS COM TOOLTIPS */}
       <section className="content-section" id="tecnologias">
         <p className="eyebrow">02 / TECNOLOGIAS</p>
 
         <h2>Ferramentas que utilizo</h2>
 
         <div className="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>TypeScript</span>
-          <span>React</span>
-          <span>Vite</span>
-          <span>Git</span>
-          <span>GitHub</span>
+
+          <span
+            className="tech-item"
+            data-tooltip="Linguagem de marcação utilizada para estruturar páginas web."
+            tabIndex={0}
+          >
+            HTML
+          </span>
+
+          <span
+            className="tech-item"
+            data-tooltip="Linguagem de estilos responsável pelo visual e layout das páginas."
+            tabIndex={0}
+          >
+            CSS
+          </span>
+
+          <span
+            className="tech-item"
+            data-tooltip="Linguagem de programação que adiciona interatividade às aplicações."
+            tabIndex={0}
+          >
+            JavaScript
+          </span>
+
+          <span
+            className="tech-item"
+            data-tooltip="Superset do JavaScript que adiciona tipagem estática ao código."
+            tabIndex={0}
+          >
+            TypeScript
+          </span>
+
+          <span
+            className="tech-item"
+            data-tooltip="Biblioteca JavaScript utilizada para construir interfaces de usuário."
+            tabIndex={0}
+          >
+            React
+          </span>
+
+          <span
+            className="tech-item"
+            data-tooltip="Ferramenta de build que oferece um ambiente rápido de desenvolvimento."
+            tabIndex={0}
+          >
+            Vite
+          </span>
+
+          <span
+            className="tech-item"
+            data-tooltip="Sistema de controle de versão para acompanhar alterações no código."
+            tabIndex={0}
+          >
+            Git
+          </span>
+
+          <span
+            className="tech-item"
+            data-tooltip="Plataforma para hospedar projetos e colaborar com outros desenvolvedores."
+            tabIndex={0}
+          >
+            GitHub
+          </span>
+
         </div>
       </section>
 
