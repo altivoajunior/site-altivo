@@ -107,7 +107,7 @@ function App() {
         <h2>Meus projetos</h2>
 
         <p>
-          Este espaço será atualizado conforme novos projetos
+          Este espaço será atualizado conforme os novos projetos
           forem desenvolvidos.
         </p>
 
