@@ -404,7 +404,7 @@ function App() {
           {/* GITHUB */}
 
           <a
-            href="https://github.com/SEU-USUARIO"
+            href="https://github.com/altivoajunior"
             className="contact-item"
             target="_blank"
             rel="noreferrer"
@@ -593,7 +593,7 @@ function App() {
       <footer>
 
         <a href="#inicio" className="logo">
-          ALTIVO<span>DEV</span>
+          ALTIVO JUNIOR<span>DEV</span>
         </a>
 
         <p>

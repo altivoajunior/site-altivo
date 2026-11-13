@@ -406,7 +406,7 @@ main {
   font-size: .92rem;
   font-weight: 600;
 
-  cursor: help;
+  cursor: pointer;
 
   transition: all .25s ease;
 }
