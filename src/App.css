@@ -549,6 +549,8 @@ main {
   color: #8ec8ff;
 
   font-size: .8rem;
+
+  cursor: pointer;
 }
 
 /* =========================================
