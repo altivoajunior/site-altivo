@@ -139,7 +139,7 @@ function App() {
       <section className="hero" id="inicio">
 
         <p className="eyebrow">
-          DESENVOLVEDOR EM FORMAÇÃO
+          DESENVOLVEDOR WEB EM FORMAÇÃO
         </p>
 
         <h1>
